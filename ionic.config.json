@@ -1,0 +1,7 @@
+{
+  "name": "clothIA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
