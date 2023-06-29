@@ -4,7 +4,7 @@ import TabsPage from '../views/TabsPage.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/tabs/outfitGenerator'
+    redirect: '/tabs/closet'
   },
   {
     path: '/tabs/',
