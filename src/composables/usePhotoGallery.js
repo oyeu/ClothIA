@@ -1,5 +1,6 @@
 import { ref, onMounted, watch } from 'vue';
-import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
+import store from '../store/index';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Preferences } from '@capacitor/preferences';
 
@@ -10,9 +11,16 @@ export const usePhotoGallery = () => {
       source: CameraSource.Camera,
       quality: 100,
     });
+    const fileName = Date.now() + '.jpeg';
+    const savedFileImage = {
+      filepath: fileName,
+      webviewPath: photo.webPath
+    };
+    store.commit('users/addPhoto', savedFileImage)
   };
 
   return {
-    takePhoto,
+    takePhoto
   };
 };
+
