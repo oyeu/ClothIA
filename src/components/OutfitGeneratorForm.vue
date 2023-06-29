@@ -1,11 +1,27 @@
 <template>
   <div id="container">
-    <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-select aria-label="Estilo" placeholder="Elige un estilo">
+        <ion-select-option value="1">Casual</ion-select-option>
+        <ion-select-option value="2">Elegante</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-fab>
+      <ion-fab-button> Generar </ion-fab-button>
+    </ion-fab>
   </div>
 </template>
 
 <script setup>
+import {
+  IonCard,
+  IonFab,
+  IonFabButton,
+  IonList,
+  IonItem,
+  IonSelect,
+  IonSelectOption,
+} from "@ionic/vue";
 defineProps({
   name: String,
 });
