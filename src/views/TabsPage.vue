@@ -5,7 +5,7 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="closet" href="/tabs/closet">
           <ion-icon aria-hidden="true" :icon="accessibility" />
-          <ion-label>Personal</ion-label>
+          <ion-label>Closet</ion-label>
         </ion-tab-button>
         <ion-tab-button tab="outfitGenerato" href="/tabs/outfitGenerator">
           <ion-icon :icon="shirt" />
